@@ -1,0 +1,41 @@
+.section-footer {
+  background-color: #282828;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &.wrapper {
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.socials {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.socials__item {
+  list-style-type: none;
+  font-size: 30px;
+}
+
+.socials__link {
+  div {
+    transition-duration: 0.5s;
+    color: #ffffff;
+    &:hover {
+      color: #ace602;
+    }
+  }
+
+}
+
+.section-footer__copirighttext {
+color:#acacae;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 35px;
+
+}

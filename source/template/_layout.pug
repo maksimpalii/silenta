@@ -1,0 +1,94 @@
+block variables
+include ./common/_mixins
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name= "description" content=`${description}`)
+    meta(name= "keywords" content=`${keywords}`)
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    // Google Tag Manager
+    script.
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MPR3SWB');
+    // End Google Tag Manager
+
+    link(rel='shortcut icon', href='/ico/favicon.ico')
+    link(rel='apple-touch-icon', sizes='57x57', href='/ico/favicons/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='/ico/favicons/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/ico/favicons/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/ico/favicons/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/ico/favicons/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/ico/favicons/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/ico/favicons/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/ico/favicons/apple-touch-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='/ico/favicons/apple-touch-icon-180x180.png')
+    link(rel='icon', type='image/png', href='/ico/favicons/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='/ico/favicons/android-chrome-192x192.png', sizes='192x192')
+    link(rel='icon', type='image/png', href='/ico/favicons/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='/ico/favicons/favicon-16x16.png', sizes='16x16')
+    link(rel='manifest', href='/ico/favicons/manifest.json')
+    link(rel='mask-icon', href='/ico/favicons/safari-pinned-tab.svg', color='#d31f35')
+    meta(name='msapplication-TileColor', content='#da532c')
+    meta(name='msapplication-TileImage', content='/mstile-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+
+
+    link(rel='stylesheet' href='/assets/css/foundation.css')
+    link(rel='stylesheet' href='/assets/css/app.css')
+    link(rel='stylesheet' href='/assets/img/sprite/sprite-png.css')
+    script(src='/assets/js/foundation.js' defer)
+
+
+
+
+
+    <!--[if lt IE 9]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+
+    <![endif]-->
+
+
+body(class= `${bodyClass}` )
+    //.preloader
+    //  .preloader__spinner
+    //    svg.night-animation(width='120', height='120', viewbox='0 0 120 120', preserveaspectratio='xMaxYMax meet')
+    //      g.group
+    //        circle.small.circle(r='35', cx='50%', cy='50%', fill='none', stroke-dasharray='1 220', stroke-linecap='round')
+    //        circle.big.circle(r='25', cx='50%', cy='50%', fill='none', stroke-dasharray='0 157')
+    //        text.loading-value(x='50%', y='50%', fill='#000') 0%
+    .header
+        .header_inn
+            a.logo_link(href="./", target="_self")
+                .logo_icon
+            +nav('menu-home', {
+                "Про Сіленту": "#",
+                "Статті": "#",
+                "Інструкція": "#",
+                "Де купити": "#"
+            })
+            ul.menu-lang
+                li.lang-item.lang-item-ru
+                    a(lang="rus" hreflang="rus" href="#", target="_self") Рус
+                li.lang-item.lang-item-tab
+                li.lang-item.lang-item-ru
+                    a(lang="ukr" hreflang="ukr" href="#", target="_self") Укр
+                li.lang-item.lang-item-tab
+                li.lang-item.lang-item-eng
+                    a(lang="eng" hreflang="eng" href="#", target="_self") Eng
+            .menu-hamburger_mob
+            .menu-hamburger
+                .menu-hamburger__item
+                    span
+
+    block content
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' defer)
+    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js' defer)
+    script(src='/assets/js/jquery.fullPage.js' defer)
+    script(src='/assets/js/app.js' defer)

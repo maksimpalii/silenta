@@ -1,0 +1,67 @@
+@import 'common/mixins';
+
+html{
+  /*font-size: 16px;*/
+  font-size: 2vmin;
+  /*font-size: 1.685vmin;*/
+  overflow-x: hidden;
+
+  @include pc{
+    font-size: 16px;
+  }
+  @include tablets{
+   font-size: 14px;
+    //font-size: 14vmin;
+  }
+  @include iphone{
+     font-size: 12px;
+
+  }
+}
+
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  color: #fff;
+  font-family: 'RotondaC';
+  font-size: 16px;
+  background-image: url("/assets/img/back.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+}
+
+.clear{
+  clear: both;
+  height: 0px;
+  width: 100%;
+}
+
+h1{
+  font-family: 'RotondaC-Bold';
+  font-size: 42px;
+}
+
+@import 'common/header';
+@import 'common/fullpage';
+@import 'common/fonts';
+@import 'common/index';
+@import 'common/icomoon';
+@import 'common/footer';
+@import 'common/_menu_widget';
+@import 'common/animate';
+
+
+
+

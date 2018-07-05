@@ -1,0 +1,207 @@
+.contact-form__wrapper {
+  color: #ffffff;
+  height: auto;
+  display: block;
+  clear: both;
+  float: left;
+  width: 100%;
+  @include iphone {
+    //width: auto;
+  }
+}
+
+.contact-form {
+  display: block;
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  & label {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    float: left;
+    margin-bottom: 9px;
+    clear: both;
+  }
+  & textarea {
+    float: left;
+    clear: both;
+    border: 1px solid #acacac;
+    background-color: transparent;
+    width: 100%;
+    min-height: 130px;
+    outline: none;
+    color: #acacac;
+    font-size: 16px;
+    padding: 10px;
+  }
+  & .error {
+    font-size: 14px;
+    color: #fd484b;
+    float: left;
+    clear: both;
+  }
+  & input {
+    float: left;
+    clear: both;
+
+    height: 39px;
+    border: 1px solid #acacac;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    padding: 0 10px;
+    color: #acacac;
+    font-size: 16px;
+  }
+  & .buttons-panel_contact-form--send {
+    background: #393939;
+    color: #ffffff;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    cursor: pointer;
+    border: none;
+    transition-duration: 0.5s;
+    &:hover {
+      background: #606060;
+    }
+  }
+  @include iphone() {
+    width: 96%;
+  }
+}
+.company_email-form_field{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  @include iphone{
+    flex-direction: column;
+  }
+}
+.name_surname-form_field {
+  display: flex;
+  justify-content: space-between;
+  @include iphone{
+    flex-direction: column;
+  }
+}
+
+.name-form_field {
+  width: 48%;
+  @include iphone{
+    width: 100%;
+  }
+}
+
+.surname-form_field {
+  width: 48%;
+  @include iphone{
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.company-form_field {
+  margin-top: 20px;
+  height: auto;
+  width: 48%;
+  @include iphone{
+    width: 100%;
+  }
+}
+
+.mail-form_field {
+  margin-top: 20px;
+  height: auto;
+  width: 48%;
+  @include iphone{
+    width: 100%;
+  }
+}
+
+.check-form__field {
+  float: left;
+  clear: both;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.check-form__field p {
+  font-size: 14px;
+}
+
+.check-form_group {
+  margin-bottom: 12px;
+  float: left;
+  clear: both;
+  & label {
+    clear: none;
+    margin: -3px 0 0 20px;
+  }
+  & input {
+    clear: none;
+    width: 13px;
+    height: 13px;
+    outline: none;
+  }
+}
+
+.check-form_field {
+  clear: both;
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.message-form_field {
+  margin-bottom: 35px;
+  width: 100%;
+  clear: both;
+  float: left;
+}
+
+.block_forma {
+  margin-bottom: 60px;
+  &#style_dark {
+    .block_forma__title {
+      color: #ffffff;
+    }
+    .contact-form__wrapper {
+      color: #ffffff;
+    }
+    .contact-form label {
+      color: #ffffff;
+    }
+    .contact-form__widget {
+      color: #ffffff;
+    }
+    .contact-form .error {
+      color: #e03f43;
+    }
+  }
+  .contact-form .buttons-panel_contact-form--send {
+    border: 2px solid #ace602;
+    background: transparent;
+    color: #ace602;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 50px;
+    width: auto;
+    height: auto;
+    font-family: 'HeliosCond';
+    outline-width: 0;
+    transition-duration: 0.5s;
+    &:hover {
+      background: #ace602;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+/* Section 3
+* --------------------------------------- */
+#section3 .imgsContainer{
+  top: 50%;
+}
+
+#section3 img{
+  top: 155px;
+  left: 455px;
+  position: absolute;
+}
+#section3 .box{
+  text-align: center;
+  margin: 10% 0 0 0;
+}
+
+
+
+/* Overwriting fullPage.js tooltip color
+* --------------------------------------- */
+.fp-tooltip{
+  color: #AAA;
+}
+#fp-nav span, .fp-slidesNav span{
+  border-color: #AAA;
+}
+#fp-nav li .active span, .fp-slidesNav .active span{
+  background: #AAA;
+}
