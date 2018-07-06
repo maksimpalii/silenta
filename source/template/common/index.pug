@@ -4,10 +4,12 @@ block content
             .section_inn
                 .block_row
                     .block_column.vert_center
-                        .obl Малюк неспокійний і вередує?
+                        .obl
+                            p Малюк неспокійний і вередує?
+                            img.oblinn(src='assets/img/oblako.png', alt='iphone')
                         img.maluk(src='assets/img/maluk.png', alt='iphone')
                         .doptext ДІЗНАЙСЯ, ЧОМУ ЙОГО ВСЕ ТАК ДРАТУЄ
-                    .block_column
+                    .block_column.spok
                         .for_logo
                             img(src='assets/img/biglogo.png', alt='iphone')
                         h1 ПРИРОДНИЙ СПОКІЙ МАЛЮКА
@@ -15,29 +17,29 @@ block content
                             img(src='assets/img/pack.png', alt='iphone')
         #section1.section
             .section_inn
-                .block_column
+                .block_column.vpliv
                     h2 ЩО ВПЛИВАЄ НА МАЛЮКА?
                     .block_row
                         .block
                             img.icon(src='assets/img/icon1.png', alt='iphone')
-                            p Емоційні навантаження
-                            ul
+                            p.pred Емоційні навантаження
+                            ul.emo
                                 li Зміна звичного оточення, похід в дитсадок, переїзд в інший будинок
                                 li Напружені відносини в сім'ї, сварки між батьками
                                 li Жорстке виховання
                                 li Глузування серед однолітків, суворий вихователь, вчитель
                         .block
                             img.icon(src='assets/img/icon2.png', alt='iphone')
-                            p Розумові навантаження
-                            ul
+                            p.pred Розумові навантаження
+                            ul.roz
                                 li Забагато нової інформації в дитсадку чи школі
                                 li Факультативи, додаткові заняття з репетиторами
                                 li Недотримання чергування розумової та фізичної діяльності
                                 li Примусове навчання
                         .block
                             img.icon(src='assets/img/icon3.png', alt='iphone')
-                            p Фізичні навантаження
-                            ul
+                            p.pred Фізичні навантаження
+                            ul.fiz
                                 li  Інтенсивні заняття фізкультурою
                                 li  Недотримання режиму денного сну
                                 li  Постійні активні ігри з товаришами
@@ -49,8 +51,8 @@ block content
                     h2 ВИСНАЖЕННЯ НЕРВОВОЇ СИСТЕМИ
                     .block_row
                         .block_column.list
-                            p СИМПТОМИ:
-                            ul
+                            p.pred СИМПТОМИ:
+                            ul.simptom
                                 li Перепади настрою
                                 li Тривожність
                                 li Вередливість
@@ -65,27 +67,27 @@ block content
             .section_inn
                 .block_column
                     .block_row
-                        img(src='assets/img/pack.png', alt='iphone')
-                        .block_column
+                        img.pack_4(src='assets/img/pack.png', alt='iphone')
+                        .block_column.right_selent
                             .for_logo
-                                img(src='assets/img/biglogo.png', alt='iphone')
-                            h2 ПРИРОДНИЙ СПОКІЙ МАЛЮКА
+                                img(src='assets/img/bigestlogo.png', alt='iphone')
+                            p.h2 ПРИРОДНИЙ СПОКІЙ МАЛЮКА
                             p
                                 strong СІЛЕНТА
                                 |  – сироп для перорального вживання, який сприяє легкій адаптації дітей до емоційних, розумових та фізичних навантажень.
-                                | Завдяки натуральним складовим забезпечує надходження до організму дитини таких важливих речовин як серотонін та магній.
-                                | Адже саме вони у великій кількості витрачаються при емоційних, розумових та фізичних навантаженнях. А їх комбінація з ромашкою, мелісою та липою забезпечує м’яку заспокійливу дію.
+                            p Завдяки натуральним складовим забезпечує надходження до організму дитини таких важливих речовин як серотонін та магній.
+                            p Адже саме вони у великій кількості витрачаються при емоційних, розумових та фізичних навантаженнях. А їх комбінація з ромашкою, мелісою та липою забезпечує м’яку заспокійливу дію.
                     .doptext Як подолати виснаження:
         #section4.section
             .section_inn
-                .block_column
+                .block_column.skladovi
                     h2 ЛИШЕ НАТУРАЛЬНІ СКЛАДОВІ
                     .block_row
-                        .block_column
+                        .block_column.dbl_row
                             .block_row
                                 .bl_col
                                     img(src='assets/img/ml1.png', alt='iphone')
-                                .bl_col
+                                .bl_col.bl_text
                                     h3 L-ТРИПТОФАН
                                     p Це амінокислота, яка не синтезується в організмі людини. Потреба в ній досить велика, особливо в період росту дитини.
                                     strong ЯК ДІЄ:
@@ -93,7 +95,7 @@ block content
                             .block_row
                                 .bl_col
                                     img(src='assets/img/ml2.png', alt='iphone')
-                                .bl_col
+                                .bl_col.bl_text
                                     h3 МАГНІЙ
                                     p Це природний стабілізатор нервової системи та один з основних мінеральних елементів організму людини.
                                     strong ЯК ДІЄ:
@@ -102,41 +104,50 @@ block content
                             img(src='assets/img/pack.png', alt='iphone')
                         .block_column
                             .block_row
-                                .bl_col
-                                    img(src='assets/img/ml3.png', alt='iphone')
+                                .bl_col.bl_text
+                                    img.romashka(src='assets/img/ml3.png', alt='iphone')
                                     h3 РОМАШКА, МЕЛІСА, ЛИПА
                                     p Натуральні екстракти квіток ромашки, листя меліси та суцвіть липи містять багатий комплекс біологічно активних речовин, вітамін С та каротин.
                                     strong ЯК ДІЄ:
                                     p Їх комбінація чинить болезаспокійливий та седативний ефект при надмірному нервовому збудженні, безсонні, вегето-судинній дистонії, порушеннях у роботі серця. А також нормалізує тиск при його зміні внаслідок емоційного збудження.
         #section5.section
             .section_inn
-                .block_column
+                .block_column.how
                     h2 ЯК ЗАСТОСОВУВАТИ
                     .block_row
                         .block_column
                             .for_boy
                                 img(src='assets/img/boy1.png', alt='iphone')
-                            h3 Діти віком від 3 до 6 років:
+                            p.pred
+                                    | Діти віком
+                                    br
+                                    | від 3 до 6 років:
                             .block_row
                                 img(src='assets/img/5ml.png', alt='iphone')
                                 span 5 мл
-                            p 2-3 рази на добу
+                            p.freq 2-3 рази на добу
                         .block_column
                             .for_boy
                                 img(src='assets/img/boy2.png', alt='iphone')
-                            h3 Діти віком від 6 до 12 років:
+                            p.pred
+                                    | Діти віком
+                                    br
+                                    | від 6 до 12 років:
                             .block_row
                                 img(src='assets/img/5ml.png', alt='iphone')
                                 span 10 мл
-                            p 2 рази на добу
+                            p.freq 2 рази на добу
                         .block_column
                             .for_boy
                                 img(src='assets/img/boy3.png', alt='iphone')
-                            h3 Діти віком від 12 років і дорослі:
+                            p.pred
+                                    | Діти віком
+                                    br
+                                    | від 12 років і дорослі:
                             .block_row
                                 img(src='assets/img/5ml.png', alt='iphone')
                                 span 15 мл
-                            p 2 рази на добу
+                            p.freq 2 рази на добу
                     a.buuton_byu(href="#") Де купити
 
 

@@ -33,7 +33,7 @@ $(document).ready(function() {
         // 'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
         'navigation': true,
         'navigationPosition': 'right',
-        'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
+        // 'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
 
         'afterLoad': function(anchorLink, index){
             if(index == 2){
