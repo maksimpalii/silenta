@@ -1,5 +1,6 @@
 "use strict";
 
+var TriggerDevice = { prev:'pc', next:'' };
 var navmainmenu = (function () {
     var menu = document.querySelector('.menu-home'),
         gamb = document.querySelector('.menu-hamburger'),
@@ -36,16 +37,16 @@ function createFullpage() {
         // 'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
 
         'afterLoad': function(anchorLink, index){
-            if(index == 2){
+            if(index === 2){
                 $('#iphone3, #iphone2, #iphone4').addClass('active');
             }
         },
 
         'onLeave': function(index, nextIndex, direction){
-            if (index == 3 && direction == 'down'){
+            if (index === 3 && direction === 'down'){
                 // $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
             }
-            else if(index == 3 && direction == 'up'){
+            else if(index === 3 && direction === 'up'){
                 // $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
             }
 
@@ -68,38 +69,54 @@ var swiper = new Swiper('.swiper-container', {
     init:false,
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+        prevEl: '.swiper-button-prev'
+    }
 });
 
 var swiper2 = new Swiper('.swiper-container2', {
     init:false,
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+        prevEl: '.swiper-button-prev'
+    }
 });
 var swiper3 = new Swiper('.swiper-container3', {
     init:false,
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+        prevEl: '.swiper-button-prev'
+    }
 });
 
-var checkSize = function () {
-    console.log(window.innerWidth);
-    if (window.innerWidth < 480){
+var runDevice = function () {
+if (TriggerDevice.prev !== TriggerDevice.next){
+    TriggerDevice.prev = TriggerDevice.next;
+    console.log('change');
+    console.log(TriggerDevice.next);
+    if (TriggerDevice.next === 'mob'){
         swiper.init();
         swiper2.init();
         swiper3.init();
         $.fn.fullpage.destroy('all');
     }
-    else{
+    else if (TriggerDevice.next === 'pc'){
         swiper.destroy();
         swiper2.destroy();
         swiper3.destroy();
         createFullpage();
+    }
+}
+
+};
+
+var checkSize = function () {
+    if (window.innerWidth < 480){
+        TriggerDevice.next = 'mob';
+        runDevice();
+    }
+    else{
+        TriggerDevice.next = 'pc';
+        runDevice();
     }
 
 };

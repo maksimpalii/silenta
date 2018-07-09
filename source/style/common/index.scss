@@ -99,7 +99,10 @@
     padding: 0;
   }
   & .block_row{
-    flex-direction: column;
+    flex-direction: row;
+    @include iphone(){
+      flex-direction: column;
+    }
   }
 }
 
@@ -211,6 +214,13 @@ p {
     width: 250px;
   }
 }
+.block_row{
+  &.swiper-wrapper{
+    @include iphone(){
+      justify-content:normal;
+    }
+  }
+}
 
 .freq {
   font-size: 22px;
@@ -230,6 +240,10 @@ p {
   width: 18%;
   max-width: 210px;
   text-align: center;
+  @include iphone(){
+    width: auto;
+    margin-bottom: 50px;
+  }
 }
 
 .spok {
@@ -458,8 +472,6 @@ p {
 }
 
 .bl_text {
-  //width: 230px;
-  //width: 370px;
   width: 22vw;
   & h3 {
     margin-top: 0;
@@ -546,14 +558,28 @@ p {
 }
 
 .swiper-container2 {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  @include iphone(){
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  & .swiper-wrapper{
+    & .swiper-slide{
+      &:nth-child(3){
+        display: none;
+        @include iphone(){
+          display: flex;
+        }
+      }
+    }
+  }
+
 }
 .swiper-container3 {
   margin: 0 auto;
@@ -564,6 +590,11 @@ p {
   z-index: 1;
   width: 100%;
   height: 100%;
+  & .swiper-slide{
+    @include iphone(){
+      padding: 0;
+    }
+  }
 }
 .swiper-slide {
   background: transparent;
