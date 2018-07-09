@@ -6,13 +6,13 @@ html{
   /*font-size: 1.685vmin;*/
   overflow-x: hidden;
 
-  @include pc{
-    font-size: 16px;
-  }
-  @include tablets{
-   font-size: 14px;
-    //font-size: 14vmin;
-  }
+  //@include pc{
+  //  font-size: 16px;
+  //}
+  //@include tablets{
+  // font-size: 14px;
+  //  //font-size: 14vmin;
+  //}
   @include iphone{
      font-size: 12px;
 
@@ -31,6 +31,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  @include iphone(){
+    background-size: 100% 190%;
+  }
 }
 
 ul, li, p {
@@ -53,8 +56,8 @@ a {
 @import 'common/fullpage';
 @import 'common/fonts';
 @import 'common/index';
-@import 'common/icomoon';
-@import 'common/footer';
+@import 'common/articles';
+@import 'common/swiper.min';
 @import 'common/_menu_widget';
 @import 'common/animate';
 

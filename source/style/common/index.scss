@@ -1,6 +1,10 @@
 .section {
   text-align: center;
   overflow: hidden;
+  @include iphone() {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 .section_inn {
@@ -17,6 +21,7 @@
 .block_column {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .block_row {
@@ -32,7 +37,7 @@
 
 #section0 {
   padding: 60px 0;
-  & .block_row{
+  & .block_row {
     justify-content: space-around;
     height: 95%;
   }
@@ -40,7 +45,7 @@
 
 #section1 {
   padding: 60px 0;
-  & ul{
+  & ul {
     color: #5a5a5a;
     list-style-type: none;
     text-align: left;
@@ -51,22 +56,34 @@
   padding: 60px 0;
   & .list {
     justify-content: center;
+    @include iphone (){
+      width: 80%;
+      margin: 0 auto;
+    }
   }
-  & .block_column{
+  & .block_column {
     justify-content: space-around;
     height: 95%;
+  }
+  & .block_row {
+    @include iphone() {
+      flex-direction: column-reverse;
+    }
   }
 }
 
 #section3 {
   padding: 60px 0;
-  & .block_column{
+  & .block_column {
     justify-content: space-around;
     height: 95%;
     align-items: center;
   }
-  & .block_row{
+  & .block_row {
     align-items: flex-end;
+    @include iphone(){
+      flex-direction: column;
+    }
   }
 }
 
@@ -78,8 +95,23 @@
     margin-top: 10px;
     display: inline-block;
   }
+  @include iphone(){
+    padding: 0;
+  }
+  & .block_row{
+    flex-direction: column;
+  }
 }
 
+#section5{
+  & .section_inn{
+    @include iphone(){
+      justify-content: normal;
+      display: block;
+      align-items: normal;
+    }
+  }
+}
 .centr_block_row {
   flex-direction: row;
   display: flex;
@@ -92,6 +124,10 @@
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 0px 2px 2px #ffffff;
+  @include iphone() {
+    width: 80%;
+    margin: 50px auto 0 auto;
+  }
 }
 
 .pred {
@@ -104,12 +140,19 @@
   text-align: left;
   margin-bottom: 10px;
   padding-left: 18px;
+  @include iphone(){
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
-.block_column{
-  &.list{
+
+.block_column {
+  &.list {
     width: 300px;
   }
 }
+
 h1 {
   font-family: 'RotondaC-Bold';
   font-size: 42px;
@@ -141,7 +184,7 @@ h3 {
 
 p {
   color: #5a5a5a;
-  & strong{
+  & strong {
     color: #000000;
   }
 }
@@ -155,17 +198,17 @@ p {
     color: #92b2e0;
   }
   & .block_row {
-    align-items:flex-end;
+    align-items: flex-end;
     justify-content: center;
   }
-  & .pred{
+  & .pred {
     padding: 0;
     text-align: center;
     margin: 35px 0;
   }
-  & .block_column{
+  & .block_column {
     padding: 0 5%;
-    width: 220px;
+    width: 250px;
   }
 }
 
@@ -188,28 +231,62 @@ p {
   max-width: 210px;
   text-align: center;
 }
-.spok{
+
+.spok {
   justify-content: flex-end;
   align-items: center;
-  & h1{
+  & h1 {
     display: inline-block;
     width: 70%;
   }
+  @include iphone() {
+    display: none;
+  }
 }
-.for_logo{
+
+.for_logo {
   width: 50%;
-  max-width: 275px;
+  max-width: 242px;
   & img {
     width: 100%;
     height: auto;
   }
 }
-.for_pack{
-  & img{
+
+.maluk {
+  height: 40vh;
+  max-height: 315px;
+  width: auto;
+  @include iphone() {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.bigboy {
+  height: 60vh;
+  max-height: 345px;
+  width: auto;
+  @include iphone () {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.bigpack {
+  height: 60vh;
+  max-height: 420px;
+  width: auto;
+}
+
+.for_pack {
+  & img {
     height: 50vh;
     width: auto;
   }
 }
+
 .obl {
   position: relative;
   width: 300px;
@@ -225,29 +302,67 @@ p {
     position: absolute;
     @include centered();
   }
+  @include iphone() {
+    margin-top: 50px;
+  }
 }
-.skladovi{
-    justify-content: space-around;
-    height: 95%;
 
+.skladovi {
+  justify-content: center;
+  height: 95%;
+  @include iphone(){
+    display: block;
+    height: auto;
+    width: 100%;
+  }
 }
+
+.center_boy {
+  &:before {
+    content: '';
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    background-image: url("/assets/img/line-left.png");
+    background-repeat: no-repeat;
+    left: 0px;
+    background-position: center right;
+  }
+  &:after {
+    content: '';
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    background-image: url("/assets/img/line-right.png");
+    background-repeat: no-repeat;
+    right: 0px;
+    background-position: center right;
+  }
+}
+
 .oblinn {
   width: 100%;
   height: auto;
 }
-.bl_col{
+
+.bl_col {
   text-align: left;
   margin-left: 20px;
+  @include iphone(){
+    text-align: center;
+    margin: 0;
+  }
 }
-.simptom{
+
+.simptom {
   color: #5a5a5a;
   font-size: 18px;
   text-align: left;
   list-style-type: none;
-  & li{
+  & li {
     display: flex;
     margin: 20px 0;
-    &:before{
+    &:before {
       content: '•';
       display: flex;
       color: #4f85f5;
@@ -255,45 +370,59 @@ p {
     }
   }
 }
-.right_selent{
-width: 520px;
-  & p{
+
+.right_selent {
+  width: 520px;
+  & p {
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     line-height: 24px;
+    display: inline-table;
   }
-  & .h2{
+  & .h2 {
     text-align: center;
     line-height: normal;
   }
-  & .for_logo{
+  & .for_logo {
     width: 80%;
     max-width: 360px;
   }
+  @include iphone(){
+    width: 100%;
+  }
 }
 
-.vpliv{
+.icon {
+  width: 203px;
+  max-width: 172px;
+  height: 245px;
+  max-height: 207px;
+}
+
+.vpliv {
   justify-content: space-around;
-  height: 95%;
-  & .block{
+  height: 100%;
+  width: 90%;
+  & .block {
     text-align: center;
     width: 30%;
   }
-  & .pred{
+  & .pred {
     font-family: 'RotondaC-Bold';
     text-align: center;
     padding: 0;
     margin: 30px 0;
   }
-  & .block_row{
+  & .block_row {
     justify-content: space-between;
   }
 }
-.emo{
-  & li{
+
+.emo {
+  & li {
     display: flex;
     margin: 20px 0;
-    &:before{
+    &:before {
       content: '•';
       display: flex;
       color: #4f85f5;
@@ -301,11 +430,12 @@ width: 520px;
     }
   }
 }
-.roz{
-  & li{
+
+.roz {
+  & li {
     display: flex;
     margin: 20px 0;
-    &:before{
+    &:before {
       content: '•';
       display: flex;
       color: #09e26d;
@@ -313,11 +443,12 @@ width: 520px;
     }
   }
 }
-.fiz{
-  & li{
+
+.fiz {
+  & li {
     display: flex;
     margin: 20px 0;
-    &:before{
+    &:before {
       content: '•';
       display: flex;
       color: #ffd800;
@@ -325,26 +456,129 @@ width: 520px;
     }
   }
 }
-.bl_text{
-  width: 230px;
-  & h3{
+
+.bl_text {
+  //width: 230px;
+  //width: 370px;
+  width: 22vw;
+  & h3 {
     margin-top: 0;
   }
-  & p{
-    font-size: 12px;
-    line-height: 16px;
+  & p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  @include iphone(){
+    width: 100%;
   }
 }
-.dbl_row{
+
+.dbl_row {
   align-items: flex-end;
-  & .block_row:nth-child(2){
+  & .block_row:nth-child(2) {
     margin-top: 20px;
   }
+  @include iphone(){
+    display: block;
+  }
+  &.swiper-wrapper{
+    @include iphone(){
+      flex-direction: row;
+    }
+  }
 }
-.romashka{
+
+.ml1 {
+  width: 213px;
+  height: 174px;
+}
+
+.ml2 {
+  width: 176px;
+  height: 172px;
+}
+
+.romashka {
+  width: 195px;
+  height: 173px;
   margin-bottom: 10px;
 }
-.pack_4{
+
+.for_big_pack {
+  justify-content: flex-end;
+  @include iphone(){
+    display: none;
+  }
+}
+
+.boys {
+  width: 197px;
+  max-width: 160px;
+  height: 194px;
+  max-height: 157px;
+}
+
+.glass {
+  width: 108px;
+  height: 111px;
+}
+
+.pack_4 {
   height: 55vh;
+  max-height: 420px;
   width: auto;
+  @include iphone(){
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+.m-hide{
+  @include iphone(){
+    display: none;
+  }
+}
+
+//SWIPPER
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container2 {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.swiper-container3 {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  background: transparent;
+}
+
+.swiper-button-next {
+  display: none;
+  @include iphone() {
+    display: block;
+  }
+}
+
+.swiper-button-prev {
+  display: none;
+  @include iphone() {
+    display: block;
+  }
 }

@@ -1,0 +1,11 @@
+extends ../_layout
+
+block variables
+    - var title = one.Pages.art.title
+    - var author = one.Pages.art.author
+    - var description = one.Pages.art.description
+    - var keywords = one.Pages.art.keywords
+    - var bodyClass = one.Pages.art.bodyClass
+
+block content
+    include ../common/article.pug

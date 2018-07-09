@@ -19,31 +19,34 @@ block content
             .section_inn
                 .block_column.vpliv
                     h2 ЩО ВПЛИВАЄ НА МАЛЮКА?
-                    .block_row
-                        .block
-                            img.icon(src='assets/img/icon1.png', alt='iphone')
-                            p.pred Емоційні навантаження
-                            ul.emo
-                                li Зміна звичного оточення, похід в дитсадок, переїзд в інший будинок
-                                li Напружені відносини в сім'ї, сварки між батьками
-                                li Жорстке виховання
-                                li Глузування серед однолітків, суворий вихователь, вчитель
-                        .block
-                            img.icon(src='assets/img/icon2.png', alt='iphone')
-                            p.pred Розумові навантаження
-                            ul.roz
-                                li Забагато нової інформації в дитсадку чи школі
-                                li Факультативи, додаткові заняття з репетиторами
-                                li Недотримання чергування розумової та фізичної діяльності
-                                li Примусове навчання
-                        .block
-                            img.icon(src='assets/img/icon3.png', alt='iphone')
-                            p.pred Фізичні навантаження
-                            ul.fiz
-                                li  Інтенсивні заняття фізкультурою
-                                li  Недотримання режиму денного сну
-                                li  Постійні активні ігри з товаришами
-                                li  Відвідування спортивних секцій
+                    .swiper-container
+                        .block_row.swiper-wrapper
+                            .block.swiper-slide
+                                img.icon(src='assets/img/icon1.png', alt='iphone')
+                                p.pred Емоційні навантаження
+                                ul.emo
+                                    li Зміна звичного оточення, похід в дитсадок, переїзд в інший будинок
+                                    li Напружені відносини в сім'ї, сварки між батьками
+                                    li Жорстке виховання
+                                    li Глузування серед однолітків, суворий вихователь, вчитель
+                            .block.swiper-slide
+                                img.icon(src='assets/img/icon2.png', alt='iphone')
+                                p.pred Розумові навантаження
+                                ul.roz
+                                    li Забагато нової інформації в дитсадку чи школі
+                                    li Факультативи, додаткові заняття з репетиторами
+                                    li Недотримання чергування розумової та фізичної діяльності
+                                    li Примусове навчання
+                            .block.swiper-slide
+                                img.icon(src='assets/img/icon3.png', alt='iphone')
+                                p.pred Фізичні навантаження
+                                ul.fiz
+                                    li  Інтенсивні заняття фізкультурою
+                                    li  Недотримання режиму денного сну
+                                    li  Постійні активні ігри з товаришами
+                                    li  Відвідування спортивних секцій
+                        .swiper-button-next
+                        .swiper-button-prev
                     .doptext Це може призвести до:
         #section2.section
             .section_inn
@@ -83,71 +86,87 @@ block content
                 .block_column.skladovi
                     h2 ЛИШЕ НАТУРАЛЬНІ СКЛАДОВІ
                     .block_row
-                        .block_column.dbl_row
-                            .block_row
-                                .bl_col
-                                    img(src='assets/img/ml1.png', alt='iphone')
-                                .bl_col.bl_text
-                                    h3 L-ТРИПТОФАН
-                                    p Це амінокислота, яка не синтезується в організмі людини. Потреба в ній досить велика, особливо в період росту дитини.
-                                    strong ЯК ДІЄ:
-                                    p З L-триптофану синтезується серотонін, який в нічний час здатний перетворюватися на мелатонін – гормон, що регулює сон. L-триптофан виявляє антидепресивну дію, сприяє зняттю тривожного стану, гіперактивності, сприяє засинанню та нормальному сну.
-                            .block_row
-                                .bl_col
-                                    img(src='assets/img/ml2.png', alt='iphone')
-                                .bl_col.bl_text
-                                    h3 МАГНІЙ
-                                    p Це природний стабілізатор нервової системи та один з основних мінеральних елементів організму людини.
-                                    strong ЯК ДІЄ:
-                                    p Магній чинить заспокійливу дію та забезпечує нормальне скорочення м’язів. Він частково регулює обмін речовин нервової, дихальної, серцево-судинної та кровотворної систем. Захищає м’язи серця від кисневої недостатності та зниження кровопостачання.
-                        .block_column
-                            img(src='assets/img/pack.png', alt='iphone')
-                        .block_column
-                            .block_row
-                                .bl_col.bl_text
-                                    img.romashka(src='assets/img/ml3.png', alt='iphone')
-                                    h3 РОМАШКА, МЕЛІСА, ЛИПА
-                                    p Натуральні екстракти квіток ромашки, листя меліси та суцвіть липи містять багатий комплекс біологічно активних речовин, вітамін С та каротин.
-                                    strong ЯК ДІЄ:
-                                    p Їх комбінація чинить болезаспокійливий та седативний ефект при надмірному нервовому збудженні, безсонні, вегето-судинній дистонії, порушеннях у роботі серця. А також нормалізує тиск при його зміні внаслідок емоційного збудження.
+                        .swiper-container2
+                            .block_column.dbl_row.swiper-wrapper
+                                .block_row.swiper-slide
+                                    .bl_col
+                                        img.ml1(src='assets/img/ml1.png', alt='iphone')
+                                    .bl_col.bl_text
+                                        h3 L-ТРИПТОФАН
+                                        p Це амінокислота, яка не синтезується в організмі людини. Потреба в ній досить велика, особливо в період росту дитини.
+                                        strong ЯК ДІЄ:
+                                        p З L-триптофану синтезується серотонін, який в нічний час здатний перетворюватися на мелатонін – гормон, що регулює сон. L-триптофан виявляє антидепресивну дію, сприяє зняттю тривожного стану, гіперактивності, сприяє засинанню та нормальному сну.
+                                .block_row.swiper-slide
+                                    .bl_col
+                                        img.ml2(src='assets/img/ml2.png', alt='iphone')
+                                    .bl_col.bl_text
+                                        h3 МАГНІЙ
+                                        p Це природний стабілізатор нервової системи та один з основних мінеральних елементів організму людини.
+                                        strong ЯК ДІЄ:
+                                        p Магній чинить заспокійливу дію та забезпечує нормальне скорочення м’язів. Він частково регулює обмін речовин нервової, дихальної, серцево-судинної та кровотворної систем. Захищає м’язи серця від кисневої недостатності та зниження кровопостачання.
+                                .block_row.swiper-slide
+                                    .bl_col
+                                        img.romashka(src='assets/img/ml3.png', alt='iphone')
+                                    .bl_col.bl_text
+                                        h3 РОМАШКА, МЕЛІСА, ЛИПА
+                                        p Натуральні екстракти квіток ромашки, листя меліси та суцвіть липи містять багатий комплекс біологічно активних речовин, вітамін С та каротин.
+                                        strong ЯК ДІЄ:
+                                        p Їх комбінація чинить болезаспокійливий та седативний ефект при надмірному нервовому збудженні, безсонні, вегето-судинній дистонії, порушеннях у роботі серця. А також нормалізує тиск при його зміні внаслідок емоційного збудження.
+
+                            .swiper-button-next
+                            .swiper-button-prev
+                            .block_column.for_big_pack
+                                img.bigpack(src='assets/img/pack.png', alt='iphone')
+                            .block_column.m-hide
+                                .block_row
+                                    .bl_col.bl_text
+                                        img.romashka(src='assets/img/ml3.png', alt='iphone')
+                                        h3 РОМАШКА, МЕЛІСА, ЛИПА
+                                        p Натуральні екстракти квіток ромашки, листя меліси та суцвіть липи містять багатий комплекс біологічно активних речовин, вітамін С та каротин.
+                                        strong ЯК ДІЄ:
+                                        p Їх комбінація чинить болезаспокійливий та седативний ефект при надмірному нервовому збудженні, безсонні, вегето-судинній дистонії, порушеннях у роботі серця. А також нормалізує тиск при його зміні внаслідок емоційного збудження.
+
         #section5.section
             .section_inn
                 .block_column.how
                     h2 ЯК ЗАСТОСОВУВАТИ
-                    .block_row
-                        .block_column
-                            .for_boy
-                                img(src='assets/img/boy1.png', alt='iphone')
-                            p.pred
-                                    | Діти віком
-                                    br
-                                    | від 3 до 6 років:
-                            .block_row
-                                img(src='assets/img/5ml.png', alt='iphone')
-                                span 5 мл
-                            p.freq 2-3 рази на добу
-                        .block_column
-                            .for_boy
-                                img(src='assets/img/boy2.png', alt='iphone')
-                            p.pred
-                                    | Діти віком
-                                    br
-                                    | від 6 до 12 років:
-                            .block_row
-                                img(src='assets/img/5ml.png', alt='iphone')
-                                span 10 мл
-                            p.freq 2 рази на добу
-                        .block_column
-                            .for_boy
-                                img(src='assets/img/boy3.png', alt='iphone')
-                            p.pred
-                                    | Діти віком
-                                    br
-                                    | від 12 років і дорослі:
-                            .block_row
-                                img(src='assets/img/5ml.png', alt='iphone')
-                                span 15 мл
-                            p.freq 2 рази на добу
+                    .swiper-container3
+                        .block_row.swiper-wrapper
+                            .block_column.swiper-slide
+                                .for_boy
+                                    img.boys(src='assets/img/boy1.png', alt='iphone')
+                                p.pred
+                                        | Діти віком
+                                        br
+                                        | від 3 до 6 років:
+                                .block_row
+                                    img.glass(src='assets/img/5ml.png', alt='iphone')
+                                    span 5 мл
+                                p.freq 2-3 рази на добу
+                            .block_column.center_boy.swiper-slide
+                                .for_boy
+                                    img.boys(src='assets/img/boy2.png', alt='iphone')
+                                p.pred
+                                        | Діти віком
+                                        br
+                                        | від 6 до 12 років:
+                                .block_row
+                                    img.glass(src='assets/img/5ml.png', alt='iphone')
+                                    span 10 мл
+                                p.freq 2 рази на добу
+                            .block_column.swiper-slide
+                                .for_boy
+                                    img.boys(src='assets/img/boy3.png', alt='iphone')
+                                p.pred
+                                        | Діти віком
+                                        br
+                                        | від 12 років і дорослі:
+                                .block_row
+                                    img.glass(src='assets/img/5ml.png', alt='iphone')
+                                    span 15 мл
+                                p.freq 2 рази на добу
+                        .swiper-button-next
+                        .swiper-button-prev
                     a.buuton_byu(href="#") Де купити
 
 

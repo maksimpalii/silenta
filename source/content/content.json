@@ -9,29 +9,17 @@
       "keywords": "DoubleClick & Admixer",
       "bodyClass": "page-home"
     },
-    "doubadm": {
-      "title": "DoubleClick & Admixer",
-      "description": "описание DoubleClick & Admixer",
-      "keywords": "ключевые слова DoubleClick & Admixer",
-      "bodyClass": "page-doubadm"
-    },
     "doubst": {
-      "title": "DoubleClick Продукты",
+      "title": "Silenta - Статті",
       "description": "описание DoubleClick Продукты",
       "keywords": "ключевые слова DoubleClick Продукты",
-      "bodyClass": "page-doubst"
+      "bodyClass": "page-articles"
     },
-    "cont": {
-      "title": "Связаться с нами",
-      "description": "описание DoubleClick & Admixer",
-      "keywords": "ключевые слова DoubleClick & Admixer",
-      "bodyClass": "page-cont"
-    },
-    "thanks": {
-      "title": "Благодарим за вашу заявку",
-      "description": "Благодарим за вашу заявку & Admixer eng",
-      "keywords": "Благодарим за вашу заявку & Admixer eng",
-      "bodyClass": "page-thanks"
+    "art": {
+      "title": "Silenta - Стаття",
+      "description": "описание DoubleClick Продукты",
+      "keywords": "ключевые слова DoubleClick Продукты",
+      "bodyClass": "page-article"
     }
   }
 }
