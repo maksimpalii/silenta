@@ -7,17 +7,8 @@ html
     title #{title}
     meta(name= "description" content=`${description}`)
     meta(name= "keywords" content=`${keywords}`)
-    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(content="ie=edge" http-equiv="x-ua-compatible")
-    meta(content="width=device-width, initial-scale=1" name="viewport")
-    // Google Tag Manager
-    script.
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MPR3SWB');
-    // End Google Tag Manager
 
     link(rel='shortcut icon', href='/ico/favicon.ico')
     link(rel='apple-touch-icon', sizes='57x57', href='/ico/favicons/apple-touch-icon-57x57.png')
@@ -87,6 +78,7 @@ body(class= `${bodyClass}` )
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' defer)
     script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js' defer)
     //script(src='/assets/js/scrolloverflow.js' defer)
+
+    script(src='/assets/js/jquery.fullpage.js' defer)
     script(src='/assets/js/swiper.min.js' defer)
-    script(src='/assets/js/jquery.fullPage.js' defer)
     script(src='/assets/js/app.js' defer)

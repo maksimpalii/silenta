@@ -28,6 +28,11 @@ navmainmenu.set();
 
 
 function createFullpage() {
+
+}
+
+$(document).ready(function() {
+      // createFullpage();
     $('#fullpage').fullpage({
         'verticalCentered': false,
         'css3': true,
@@ -55,10 +60,6 @@ function createFullpage() {
             // $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
         }
     });
-}
-
-$(document).ready(function() {
-    createFullpage();
 });
 // window.onload= function () {
 //     // blur.set();
@@ -93,13 +94,14 @@ if (TriggerDevice.prev !== TriggerDevice.next){
     TriggerDevice.prev = TriggerDevice.next;
     console.log('change');
     console.log(TriggerDevice.next);
-    if (TriggerDevice.next === 'mob'){
+    var swips = document.querySelector('.swiper-container');
+    if (TriggerDevice.next === 'mob' && swips){
         swiper.init();
         swiper2.init();
         swiper3.init();
         $.fn.fullpage.destroy('all');
     }
-    else if (TriggerDevice.next === 'pc'){
+    else if (TriggerDevice.next === 'pc' && swips){
         swiper.destroy();
         swiper2.destroy();
         swiper3.destroy();
@@ -108,9 +110,11 @@ if (TriggerDevice.prev !== TriggerDevice.next){
 }
 
 };
-
+// swiper.init();
+// swiper2.init();
+// swiper3.init();
 var checkSize = function () {
-    if (window.innerWidth < 480){
+    if (window.innerWidth < 640){
         TriggerDevice.next = 'mob';
         runDevice();
     }
@@ -121,5 +125,30 @@ var checkSize = function () {
 
 };
 
-window.addEventListener('resize', checkSize);
-window.addEventListener('load', checkSize);
+var checkSizeLoad = function () {
+    var swips = document.querySelector('.swiper-container'),
+        fullp = document.querySelector('#fullpage');
+    if (window.innerWidth < 768){
+        if(swips){
+            swiper.init();
+            swiper2.init();
+            swiper3.init();
+        }
+        if (fullp){
+            $.fn.fullpage.destroy('all');
+        }
+
+    }
+    else{
+        //createFullpage();
+    }
+    console.log(window.innerWidth);
+
+};
+
+// window.addEventListener('resize', checkSize);
+// window.addEventListener('load', checkSizeLoad);
+
+$(window).load(function () {
+   checkSizeLoad();
+});

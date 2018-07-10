@@ -49,6 +49,9 @@
     color: #5a5a5a;
     list-style-type: none;
     text-align: left;
+    @include iphone(){
+      font-size: 18px;
+    }
   }
 }
 
@@ -64,11 +67,18 @@
   & .block_column {
     justify-content: space-around;
     height: 95%;
+    &.list{
+      height: auto;
+    }
   }
   & .block_row {
     @include iphone() {
       flex-direction: column-reverse;
+      height: auto;
     }
+  }
+  @include iphone(){
+    padding: 0;
   }
 }
 
@@ -78,11 +88,15 @@
     justify-content: space-around;
     height: 95%;
     align-items: center;
+    @include iphone(){
+      height: auto;
+    }
   }
   & .block_row {
     align-items: flex-end;
     @include iphone(){
       flex-direction: column;
+      height: auto;
     }
   }
 }
@@ -94,6 +108,10 @@
     font-size: 12px;
     margin-top: 10px;
     display: inline-block;
+    @include iphone(){
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
   @include iphone(){
     padding: 0;
@@ -211,7 +229,7 @@ p {
   }
   & .block_column {
     padding: 0 5%;
-    width: 250px;
+    width: 270px;
   }
 }
 .block_row{
@@ -392,6 +410,9 @@ p {
     margin-bottom: 25px;
     line-height: 24px;
     display: inline-table;
+    @include iphone(){
+      font-size: 18px;
+    }
   }
   & .h2 {
     text-align: center;
@@ -482,6 +503,10 @@ p {
   }
   @include iphone(){
     width: 100%;
+    & p{
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -541,8 +566,11 @@ p {
   width: auto;
   @include iphone(){
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+
+    margin:0 auto 20px auto;
+    max-height: 300px;
+    width: auto;
+
   }
 }
 .m-hide{
@@ -555,6 +583,7 @@ p {
 .swiper-container {
   width: 100%;
   height: 100%;
+  height: auto;
 }
 
 .swiper-container2 {
@@ -568,6 +597,7 @@ p {
     z-index: 1;
     width: 100%;
     height: 100%;
+    height: auto;
   }
   & .swiper-wrapper{
     & .swiper-slide{
@@ -590,6 +620,7 @@ p {
   z-index: 1;
   width: 100%;
   height: 100%;
+  height: auto;
   & .swiper-slide{
     @include iphone(){
       padding: 0;
