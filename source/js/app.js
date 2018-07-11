@@ -1,6 +1,25 @@
 "use strict";
+var checkSizeLoad = function () {
+    var swips = document.querySelector('.swiper-container'),
+        bods = document.body,
+        ht = document.getElementsByTagName( 'html' )[0],
+        fullp = document.querySelector('#fullpage');
+    if (window.innerWidth < 1100){
+        bods.classList.add('mobile');
+        ht.classList.add('mobile');
+    }
+    else if(window.innerWidth < 640){
+        bods.classList.add('mobile-phone');
+        ht.classList.add('mobile-phone');
+    }
+    else{
+        bods.classList.remove('mobile');
+        bods.classList.remove('mobile-phone');
+    }
+    // console.log(window.innerWidth);
+};
+checkSizeLoad();
 
-var TriggerDevice = { prev:'pc', next:'' };
 var navmainmenu = (function () {
     var menu = document.querySelector('.menu-home'),
         gamb = document.querySelector('.menu-hamburger'),
@@ -26,10 +45,6 @@ var navmainmenu = (function () {
 
 navmainmenu.set();
 
-
-function createFullpage() {
-
-}
 
 $(document).ready(function() {
       // createFullpage();
@@ -89,49 +104,12 @@ var swiper3 = new Swiper('.swiper-container3', {
     }
 });
 
-var runDevice = function () {
-if (TriggerDevice.prev !== TriggerDevice.next){
-    TriggerDevice.prev = TriggerDevice.next;
-    console.log('change');
-    console.log(TriggerDevice.next);
-    var swips = document.querySelector('.swiper-container');
-    if (TriggerDevice.next === 'mob' && swips){
-        swiper.init();
-        swiper2.init();
-        swiper3.init();
-        $.fn.fullpage.destroy('all');
-    }
-    else if (TriggerDevice.next === 'pc' && swips){
-        swiper.destroy();
-        swiper2.destroy();
-        swiper3.destroy();
-        createFullpage();
-    }
-}
 
-};
-// swiper.init();
-// swiper2.init();
-// swiper3.init();
-var checkSize = function () {
-    if (window.innerWidth < 640){
-        TriggerDevice.next = 'mob';
-        runDevice();
-    }
-    else{
-        TriggerDevice.next = 'pc';
-        runDevice();
-    }
-
-};
-
-var checkSizeLoad = function () {
+var checkSizeLoadEnd = function () {
     var swips = document.querySelector('.swiper-container'),
-        swips2 = document.querySelector('.swiper-container2'),
         fullp = document.querySelector('#fullpage');
     if (window.innerWidth < 1100){
         if(swips){
-            swips2.classList.add('act');
             swiper.init();
             swiper2.init();
             swiper3.init();
@@ -139,18 +117,10 @@ var checkSizeLoad = function () {
         if (fullp){
             $.fn.fullpage.destroy('all');
         }
-
     }
-    else{
-        //createFullpage();
-    }
-    console.log(window.innerWidth);
-
 };
 
-// window.addEventListener('resize', checkSize);
-// window.addEventListener('load', checkSizeLoad);
 
 $(window).load(function () {
-   checkSizeLoad();
+    checkSizeLoadEnd();
 });

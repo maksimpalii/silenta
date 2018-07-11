@@ -1,10 +1,6 @@
 .section {
   text-align: center;
   overflow: hidden;
-  @include iphone() {
-    margin: 0 auto;
-    width: 90%;
-  }
 }
 
 .section_inn {
@@ -27,7 +23,6 @@
 .block_row {
   display: flex;
   flex-direction: row;
-
 }
 
 .vert_center {
@@ -49,9 +44,6 @@
     color: #5a5a5a;
     list-style-type: none;
     text-align: left;
-    @include iphone(){
-      font-size: 18px;
-    }
   }
 }
 
@@ -59,10 +51,6 @@
   padding: 60px 0;
   & .list {
     justify-content: center;
-    @include iphone (){
-      width: 80%;
-      margin: 0 auto;
-    }
   }
   & .block_column {
     justify-content: space-around;
@@ -72,32 +60,19 @@
     }
   }
   & .block_row {
-    @include iphone() {
-      flex-direction: column-reverse;
-      height: auto;
-    }
-  }
-  @include iphone(){
-    padding: 0;
   }
 }
 
 #section3 {
   padding: 60px 0;
   & .block_column {
-    justify-content: space-around;
+    justify-content: center;
     height: 95%;
     align-items: center;
-    @include iphone(){
-      height: auto;
-    }
   }
   & .block_row {
     align-items: flex-end;
-    @include iphone(){
-      flex-direction: column;
-      height: auto;
-    }
+    padding-bottom: 5%;
   }
 }
 
@@ -108,37 +83,17 @@
     font-size: 12px;
     margin-top: 10px;
     display: inline-block;
-    @include iphone(){
-      font-size: 18px;
-      line-height: 20px;
-    }
   }
-  @include iphone(){
-    padding: 0;
-  }
-  & .block_row{
-    flex-direction: row;
-    @include iphone(){
-      flex-direction: column;
-    }
-  }
-  .swiper-container2{
+  & .swiper-container2{
     & .block_row{
-      flex-direction: column;
+      flex-direction: row;
+      height: auto;
+      width: auto;
     }
   }
 }
 
 
-#section5{
-  & .section_inn{
-    @include iphone(){
-      justify-content: normal;
-      display: block;
-      align-items: normal;
-    }
-  }
-}
 .centr_block_row {
   flex-direction: row;
   display: flex;
@@ -151,10 +106,6 @@
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 0px 2px 2px #ffffff;
-  @include iphone() {
-    width: 80%;
-    margin: 50px auto 0 auto;
-  }
 }
 
 .pred {
@@ -167,11 +118,6 @@
   text-align: left;
   margin-bottom: 10px;
   padding-left: 18px;
-  @include iphone(){
-    padding: 0;
-    width: 100%;
-    text-align: center;
-  }
 }
 
 .block_column {
@@ -234,14 +180,10 @@ p {
     margin: 35px 0;
   }
   & .block_column {
-    padding: 0 5%;
+    //padding: 0 5%;
     width: 270px;
-  }
-}
-.block_row{
-  &.swiper-wrapper{
-    @include iphone(){
-      justify-content:normal;
+    &.center_boy{
+      padding: 0 5%;
     }
   }
 }
@@ -264,21 +206,19 @@ p {
   width: 18%;
   max-width: 210px;
   text-align: center;
-  @include iphone(){
-    width: auto;
-    margin-bottom: 50px;
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    background: #0051ad;
+    color: #ffffff;
   }
 }
 
 .spok {
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   & h1 {
     display: inline-block;
     width: 70%;
-  }
-  @include iphone() {
-    display: none;
   }
 }
 
@@ -296,20 +236,12 @@ p {
   height: 40vh;
   width: auto;
   padding: 3% 0;
-  @include iphone() {
-    width: 100%;
-    height: auto;
-  }
 }
 
 .bigboy {
   max-height: 400px;
   height: 60vh;
-  //max-height: 345px;
   width: auto;
-  @include iphone () {
-    margin-bottom: 20px;
-  }
 }
 
 .bigpack {
@@ -320,7 +252,7 @@ p {
 
 .for_pack {
   & img {
-    max-height: 420px;
+    max-height: 400px;
     height: 50vh;
     width: auto;
   }
@@ -341,19 +273,13 @@ p {
     position: absolute;
     @include centered();
   }
-  @include iphone() {
-    margin-top: 50px;
-  }
+
 }
 
 .skladovi {
   justify-content: center;
   height: 95%;
-  @include iphone(){
-    display: block;
-    height: auto;
-    width: 100%;
-  }
+
 }
 
 .center_boy {
@@ -387,10 +313,6 @@ p {
 .bl_col {
   text-align: left;
   margin-left: 20px;
-  @include iphone(){
-    text-align: center;
-    margin: 0;
-  }
 }
 
 .simptom {
@@ -417,9 +339,6 @@ p {
     margin-bottom: 25px;
     line-height: 24px;
     display: inline-table;
-    @include iphone(){
-      font-size: 18px;
-    }
   }
   & .h2 {
     text-align: center;
@@ -428,9 +347,6 @@ p {
   & .for_logo {
     width: 80%;
     max-width: 360px;
-  }
-  @include iphone(){
-    width: 100%;
   }
 }
 
@@ -508,27 +424,12 @@ p {
     font-size: 15px;
     line-height: 18px;
   }
-  @include iphone(){
-    width: 100%;
-    & p{
-      font-size: 18px;
-      line-height: 22px;
-    }
-  }
 }
 
 .dbl_row {
   align-items: flex-end;
   & .block_row:nth-child(2) {
     margin-top: 20px;
-  }
-  @include iphone(){
-    display: block;
-  }
-  &.swiper-wrapper{
-    @include iphone(){
-      flex-direction: row;
-    }
   }
 }
 
@@ -550,9 +451,6 @@ p {
 
 .for_big_pack {
   justify-content: center;
-  @include iphone(){
-    display: none;
-  }
 }
 
 .boys {
@@ -571,22 +469,8 @@ p {
   height: 55vh;
   max-height: 420px;
   width: auto;
-  @include iphone(){
-    width: 100%;
-
-    margin:0 auto 20px auto;
-    max-height: 300px;
-    width: auto;
-
-  }
-}
-.m-hide{
-  @include iphone(){
-    display: none;
-  }
 }
 
-//SWIPPER
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -595,24 +479,10 @@ p {
 
 .swiper-container2 {
   display: flex;
-  @include iphone(){
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    height: auto;
-  }
   & .swiper-wrapper{
     & .swiper-slide{
       &:nth-child(3){
         display: none;
-        @include iphone(){
-          display: flex;
-        }
       }
     }
   }
@@ -620,17 +490,14 @@ p {
 .swiper-container3 {
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   list-style: none;
   padding: 0;
   z-index: 1;
   width: 100%;
-  height: 100%;
   height: auto;
-  & .swiper-slide{
-    @include iphone(){
-      padding: 0;
-    }
+  & .swiper-wrapper{
+    align-items: center;
   }
 }
 .swiper-slide {
@@ -639,14 +506,8 @@ p {
 
 .swiper-button-next {
   display: none;
-  @include iphone() {
-    display: block;
-  }
 }
 
 .swiper-button-prev {
   display: none;
-  @include iphone() {
-    display: block;
-  }
 }

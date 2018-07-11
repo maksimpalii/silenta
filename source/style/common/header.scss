@@ -1,14 +1,11 @@
 .header {
-  background: transparent;
   width: 100%;
   height: 90px;
   position: fixed;
   z-index: 100;
   top:0;
   background: #3fc0fa;
-  @include iphone(){
-    background: #31bbf9;
-  }
+
 }
 .header_inn {
   width: 900px;
@@ -18,17 +15,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include pc {
-    width: 90%;
-  }
-
 }
 
 .menu-home {
   display: flex;
-  @include pc {
-    display: none;
-  }
 }
 
 .menu-home__item {
@@ -40,9 +30,6 @@
   -webkit-box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.40);
   -moz-box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.40);
   box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.40);
-  @include iphone(){
-    box-shadow: none;
-  }
   & a{
     border-radius: 25px;
     padding: 10px 20px;
@@ -50,9 +37,6 @@
     -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,120,172,1);
     -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,120,172,1);
     box-shadow: inset 0px 0px 5px 1px rgba(0,120,172,1);
-    @include iphone(){
-      box-shadow: none;
-    }
   }
 }
 .menu-home__link {
@@ -62,6 +46,13 @@
   padding: 10px 20px;
   text-decoration: none;
   text-shadow: 0px -1px 2px rgba(0, 88, 153, 1);
+  &:hover{
+    color: #003e78;
+    color: #c0fa00;
+    color: #ffe718;
+  }
+
+
 
 }
 .page-articles{
@@ -105,28 +96,23 @@
 }
 
 .menu-lang {
-  @include pc {
-    display: none;
-    opacity: 0;
-  }
   list-style-type: none;
   & .lang-item {
     float: left;
     padding: 0 5px;
     & a {
       text-decoration: none;
-
-      opacity: 0.5;
+      text-shadow: 0rem -0.0625rem 0.125rem #005899;
       &:hover{
-        opacity: 1;
+        color: #003e78;
+        color: #c0fa00;
+        color: #ffe718;
       }
     }
     &.lang-item-active a{
       color: #003e78;
-      opacity: 1;
-      @include pc{
-        color: #338b44;
-      }
+      color: #c0fa00;
+      color: #ffe718;
     }
 
   }
@@ -153,10 +139,6 @@
     .menu-hamburger__item, .menu-hamburger__item:before, .menu-hamburger__item:after {
       //background: #004cd1;
     }
-  }
-  @include pc {
-    display: block;
-    z-index: 10;
   }
 }
 
@@ -198,9 +180,6 @@
   animation: fadeIn 2s ease-in-out forwards 0.6s;
   & .menu-home__link{
     font-size: 20px;
-    @include iphone(){
-      font-size: 30px;
-    }
   }
 }
 

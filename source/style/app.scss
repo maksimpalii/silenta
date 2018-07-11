@@ -2,8 +2,8 @@
 
 html{
   //font-size: 16px;
-  //font-size: 2vmin;
-  font-size: 0.8rem;
+  font-size: 2vmin;
+  //font-size: 0.8rem;
   overflow-x: hidden;
 
   //@include pc{
@@ -13,10 +13,12 @@ html{
   // font-size: 14px;
   //  //font-size: 14vmin;
   //}
-  @include iphone{
-     font-size: 12px;
-
-  }
+  //@include phone{
+  //  font-size: 12px;
+  //}
+  //@include iphone{
+  //   font-size: 12px;
+  //}
 }
 
 
@@ -28,9 +30,6 @@ body {
   font-family: 'RotondaC';
   font-size: 16px;
   background-color: transparent;
-  @include iphone(){
-    overflow:hidden;
-  }
 }
 
 ul, li, p {
@@ -60,19 +59,17 @@ a {
   & img{
     width: 100%;
     height: 100%;
-    @include iphone(){
-      height: 120%;
-    }
   }
 }
 
-@import 'common/header';
-@import 'common/fullpage';
 @import 'common/fonts';
-@import 'common/index';
-@import 'common/articles';
-@import 'common/swiper.min';
+@import 'common/header';
 @import 'common/_menu_widget';
+@import 'common/index';
+@import 'common/fullpage';
+@import 'common/swiper.min';
+@import 'common/articles';
+@import 'common/mobile';
 @import 'common/animate';
 
 

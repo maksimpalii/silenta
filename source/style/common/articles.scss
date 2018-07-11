@@ -11,9 +11,6 @@
     text-align: center;
     text-transform: uppercase;
   }
-  @include iphone(){
-    width: 90%;
-  }
 }
 
 .post-list {
@@ -133,7 +130,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 2%;
-  @include small(){
+  @include small() {
     width: 100%;
   }
 }
@@ -156,14 +153,7 @@
   max-width: 300px;
   flex-direction: column;
   bottom: -13%;
-@include iphone(){
-  display: flex;
-  position: relative;
-  bottom: auto;
-  margin-top: -50px;
-  left: auto;
-  right: auto;
-}
+
 }
 
 .des_obl {
@@ -245,18 +235,13 @@
 
 .wrap {
   margin: 0 5%;
-  @include iphone(){
-    width: 90%;
-    position: relative;
-    margin: 0 auto;
-  }
 }
 
 .post {
   & h1 {
     text-transform: uppercase;
   }
-  & p{
+  & p {
     font-size: 18px;
     letter-spacing: 1px;
     margin-bottom: 20px;
@@ -267,14 +252,15 @@
 .post-img {
   float: left;
   margin: 0px 35px 20px 0px;
-  @include small(){
+  @include small() {
     float: none;
     width: 100%;
     height: auto;
     margin-bottom: 20px;
   }
 }
-.back-link{
+
+.back-link {
   font-family: 'RotondaC-Bold';
   font-size: 16px;
   color: #0051ad;
@@ -283,54 +269,54 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  &:before{
+  &:before {
     content: '';
     display: block;
     background-image: url('/assets/img/back_link.png');
     width: 25px;
-    height: 13px;    float: left;
+    height: 13px;
+    float: left;
     background-repeat: no-repeat;
     background-position: center center;
-    @include iphone(){
-      width: 25px;
-    }
   }
-  &.big{
+  &.big {
     justify-content: center;
     font-size: 22px;
     margin: 30px 0;
-    &:before{
+    &:before {
       margin-right: 10px;
     }
   }
 }
-.post{
+
+.post {
   position: relative;
 }
-.post-top{
-  @include small(){
+
+.post-top {
+  @include small() {
     display: flex;
     flex-direction: column-reverse;
   }
 }
-.interes{
+
+.interes {
   font-family: 'RotondaC-Bold';
   font-size: 22px;
   color: #3c3c3c;
   text-transform: uppercase;
   margin: 30px 0;
-  @include iphone(){
-    text-align: center;
-  }
 }
-.block_interes{
+
+.block_interes {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.block_int{
+
+.block_int {
   width: 275px;
   text-decoration: none;
-  & p{
+  & p {
     font-family: 'RotondaC-Bold';
     color: #0051ad;
     font-size: 17px;
@@ -338,22 +324,22 @@
     margin: 15px 0;
     text-transform: uppercase;
   }
-  & .more_in{
+  & .more_in {
     font-family: 'RotondaC';
     font-size: 16px;
-text-decoration: underline;
+    text-decoration: underline;
     text-transform: none;
   }
 }
 
-.prev_img{
+.prev_img {
   width: 275px;
   height: 215px;
   overflow: hidden;
   position: relative;
-  & img{
+  & img {
     width: 100%;
-    height:auto;
+    height: auto;
     position: absolute;
     @include centered();
   }
