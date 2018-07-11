@@ -127,9 +127,11 @@ var checkSize = function () {
 
 var checkSizeLoad = function () {
     var swips = document.querySelector('.swiper-container'),
+        swips2 = document.querySelector('.swiper-container2'),
         fullp = document.querySelector('#fullpage');
-    if (window.innerWidth < 768){
+    if (window.innerWidth < 1100){
         if(swips){
+            swips2.classList.add('act');
             swiper.init();
             swiper2.init();
             swiper3.init();

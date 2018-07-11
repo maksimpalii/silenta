@@ -133,7 +133,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 2%;
-  @include iphone(){
+  @include small(){
     width: 100%;
   }
 }
@@ -267,7 +267,7 @@
 .post-img {
   float: left;
   margin: 0px 35px 20px 0px;
-  @include iphone(){
+  @include small(){
     float: none;
     width: 100%;
     height: auto;
@@ -308,7 +308,7 @@
   position: relative;
 }
 .post-top{
-  @include iphone(){
+  @include small(){
     display: flex;
     flex-direction: column-reverse;
   }

@@ -31,7 +31,7 @@
 }
 
 .vert_center {
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -122,7 +122,13 @@
       flex-direction: column;
     }
   }
+  .swiper-container2{
+    & .block_row{
+      flex-direction: column;
+    }
+  }
 }
+
 
 #section5{
   & .section_inn{
@@ -286,9 +292,10 @@ p {
 }
 
 .maluk {
+  max-height: 390px;
   height: 40vh;
-  max-height: 315px;
   width: auto;
+  padding: 3% 0;
   @include iphone() {
     width: 100%;
     height: auto;
@@ -296,12 +303,11 @@ p {
 }
 
 .bigboy {
+  max-height: 400px;
   height: 60vh;
-  max-height: 345px;
+  //max-height: 345px;
   width: auto;
   @include iphone () {
-    width: 100%;
-    height: auto;
     margin-bottom: 20px;
   }
 }
@@ -314,6 +320,7 @@ p {
 
 .for_pack {
   & img {
+    max-height: 420px;
     height: 50vh;
     width: auto;
   }
@@ -542,7 +549,7 @@ p {
 }
 
 .for_big_pack {
-  justify-content: flex-end;
+  justify-content: center;
   @include iphone(){
     display: none;
   }
@@ -609,7 +616,6 @@ p {
       }
     }
   }
-
 }
 .swiper-container3 {
   margin: 0 auto;

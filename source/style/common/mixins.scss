@@ -38,19 +38,18 @@ $varCircHtml5: 0.85;
     @content;
   }
 }
-@mixin tablets(){
-  @media screen and (max-width:959px) {
-    @content;
-  }
-}
 
 @mixin iphone(){
-  @media screen and (max-width:960px) {
+  @media screen and (max-width:1200px)  {
     @content;
   }
 }
 
-
+@mixin small(){
+  @media screen and (max-width: 1000px){
+    @content;
+  }
+}
 
 
 

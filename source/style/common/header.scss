@@ -122,7 +122,7 @@
       }
     }
     &.lang-item-active a{
-      color: #ace602;
+      color: #003e78;
       opacity: 1;
       @include pc{
         color: #338b44;
@@ -139,6 +139,7 @@
     animation: fadeInUp 2s ease-in-out forwards 0.6s;
   }
 }
+
 .menu-hamburger {
   position: absolute;
   z-index: 30;
